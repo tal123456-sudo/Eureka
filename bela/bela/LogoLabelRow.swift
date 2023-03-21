@@ -20,11 +20,9 @@ final class LogoLabelRow: Row<LogoLabelCell>, RowType {
         cellProvider = CellProvider<LogoLabelCell>(nibName: "LogoLabelCell")
         cell.height = { 70 }
     }
-    
     override func customUpdateCell() {
            cell.configure(with: logoURL, labelText: labelText)
        }
-
 }
 
 

@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="980.91603053435108" y="-34.507042253521128"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Detail View Controllar-->
         <scene sceneID="Qnn-QA-qWi">
             <objects>
-                <viewController id="0fw-zm-thb" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="0fw-zm-thb" customClass="DetailViewControllar" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YBS-BO-5s3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

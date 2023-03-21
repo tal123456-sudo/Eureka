@@ -18,7 +18,7 @@ extension Endpoint {
     var scheme: String {
         return "https"
     }
-
+    
     var host: String {
         return "api-football-v1.p.rapidapi.com"
     }

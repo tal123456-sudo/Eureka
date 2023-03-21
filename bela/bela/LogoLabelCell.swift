@@ -14,8 +14,7 @@ class LogoLabelCell: Cell<String>, CellType {
     @IBOutlet weak var label: UILabel!
     
     var logoURL: URL?
-    var leagueId: String?
-    
+  
     func configure(with logoURL: URL?, labelText: String?) {
         self.logoURL = logoURL
         label.text = labelText

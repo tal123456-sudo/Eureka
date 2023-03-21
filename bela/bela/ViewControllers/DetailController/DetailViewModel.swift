@@ -13,7 +13,6 @@ class DetailViewModel {
     
     init(service: LeagueServiceable) {
         self.service = service
-        
     }
     
     func fetchData(id: String, completion: @escaping (Result<LeagueDetail, RequestError>) -> Void) {
@@ -22,14 +21,4 @@ class DetailViewModel {
             completion(result)
         }
     }
-  
-
 }
-
-/* func fetchData(id: String, completion: @escaping (Result<LeagueDetail, RequestError>) -> Void) {
-         Task(priority: .background) {
-             let result = await service.getLeagueDetail(id: id)
-             print(result)
-             completion(result)
-         }
-     }*/

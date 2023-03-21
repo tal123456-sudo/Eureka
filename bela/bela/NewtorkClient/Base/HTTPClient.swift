@@ -35,7 +35,6 @@ extension HTTPClient {
         if let body = endpoint.body {
                 request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
             }
-      
         do {
             let (data, response) = try await URLSession.shared.data(for: request, delegate: nil)
             guard let response = response as? HTTPURLResponse else {
@@ -58,7 +57,6 @@ extension HTTPClient {
         }
     }
 }
-
 
 protocol URLQueryParameterStringConvertible {
     var queryParameters: String {get}
