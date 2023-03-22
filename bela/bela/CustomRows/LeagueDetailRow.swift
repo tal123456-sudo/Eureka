@@ -4,19 +4,19 @@
 //
 //  Created by Muhammet  on 21.03.2023.
 //
-
 import Foundation
 import Eureka
 
-final class LogoDetailRow: Row<LeagueDetailCell>, RowType {
+final class LeagueDetailRow: Row<LeagueDetailCell>, RowType {
     var logoURL: URL?
     var rank: String?
-    var puan1: String?
-    var puan2: String?
-    var puan3: String?
-    var puan4: String?
-    var nameguzel: String?
-    var puan5: String?
+    var wins: String?
+    var draw: String?
+    var lose: String?
+    var played: String?
+    var points: String?
+    var name: String?
+    
     required init(tag: String?) {
         super.init(tag: tag)
         cellProvider = CellProvider<LeagueDetailCell>(nibName: "LeagueDetailCell")
@@ -24,6 +24,6 @@ final class LogoDetailRow: Row<LeagueDetailCell>, RowType {
     }
     
     override func customUpdateCell() {
-        cell.configure(with: logoURL, rank: rank, puan1:puan1, puan2:puan2, puan3:puan3, puan4:puan4,nameguzel:nameguzel)
+        cell.configure(with: logoURL, rank: rank, wins: wins, draw: draw, lose: lose, played: played,points: points,name: name!)
        }
 }

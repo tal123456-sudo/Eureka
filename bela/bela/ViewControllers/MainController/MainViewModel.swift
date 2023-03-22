@@ -13,7 +13,6 @@ class MainViewModel {
     
     init(service: LeagueServiceable) {
         self.service = service
-       
     }
     
     func fetchData(completion: @escaping (Result<LeagueModel, RequestError>) -> Void) {
@@ -22,8 +21,5 @@ class MainViewModel {
             completion(result)
         }
     }
-    
-
-    
 }
 

@@ -29,11 +29,11 @@
 		71B240E229C20D9F00E561B4 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B240E129C20D9F00E561B4 /* DetailViewModel.swift */; };
 		71BDC03529CA049A0022A4DC /* LeagueDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BDC03329CA049A0022A4DC /* LeagueDetailCell.swift */; };
 		71BDC03629CA049A0022A4DC /* LeagueDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71BDC03429CA049A0022A4DC /* LeagueDetailCell.xib */; };
-		71BDC03829CA06D30022A4DC /* LogoDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BDC03729CA06D30022A4DC /* LogoDetailRow.swift */; };
+		71BDC03829CA06D30022A4DC /* LeagueDetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BDC03729CA06D30022A4DC /* LeagueDetailRow.swift */; };
 		71D7017229BF596400279903 /* LeagueDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138F62029BB4C2100DF62B8 /* LeagueDetail.swift */; };
-		71D7017429BFAE5B00279903 /* LogoLabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7017329BFAE5B00279903 /* LogoLabelRow.swift */; };
-		71D7017729BFAEB400279903 /* LogoLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7017529BFAEB400279903 /* LogoLabelCell.swift */; };
-		71D7017829BFAEB400279903 /* LogoLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D7017629BFAEB400279903 /* LogoLabelCell.xib */; };
+		71D7017429BFAE5B00279903 /* LeagueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7017329BFAE5B00279903 /* LeagueRow.swift */; };
+		71D7017729BFAEB400279903 /* LeagueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7017529BFAEB400279903 /* LeagueCell.swift */; };
+		71D7017829BFAEB400279903 /* LeagueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D7017629BFAEB400279903 /* LeagueCell.xib */; };
 		71D7017B29BFB3D100279903 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 71D7017A29BFB3D100279903 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -81,10 +81,10 @@
 		71B240E129C20D9F00E561B4 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		71BDC03329CA049A0022A4DC /* LeagueDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailCell.swift; sourceTree = "<group>"; };
 		71BDC03429CA049A0022A4DC /* LeagueDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeagueDetailCell.xib; sourceTree = "<group>"; };
-		71BDC03729CA06D30022A4DC /* LogoDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoDetailRow.swift; sourceTree = "<group>"; };
-		71D7017329BFAE5B00279903 /* LogoLabelRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoLabelRow.swift; sourceTree = "<group>"; };
-		71D7017529BFAEB400279903 /* LogoLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoLabelCell.swift; sourceTree = "<group>"; };
-		71D7017629BFAEB400279903 /* LogoLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoLabelCell.xib; sourceTree = "<group>"; };
+		71BDC03729CA06D30022A4DC /* LeagueDetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailRow.swift; sourceTree = "<group>"; };
+		71D7017329BFAE5B00279903 /* LeagueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRow.swift; sourceTree = "<group>"; };
+		71D7017529BFAEB400279903 /* LeagueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueCell.swift; sourceTree = "<group>"; };
+		71D7017629BFAEB400279903 /* LeagueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeagueCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,18 +146,13 @@
 		716713DD29A917FD00A48966 /* bela */ = {
 			isa = PBXGroup;
 			children = (
-				716713EC29A917FE00A48966 /* Info.plist */,
 				718398ED29BA55F90017DF0A /* Core */,
 				718398E729BA55AF0017DF0A /* NewtorkClient */,
 				7138F61B29BB4AB000DF62B8 /* Models */,
 				718398EC29BA55E90017DF0A /* Scenes */,
 				718398EB29BA55DB0017DF0A /* ViewControllers */,
-				71D7017329BFAE5B00279903 /* LogoLabelRow.swift */,
-				71D7017529BFAEB400279903 /* LogoLabelCell.swift */,
-				71D7017629BFAEB400279903 /* LogoLabelCell.xib */,
-				71BDC03329CA049A0022A4DC /* LeagueDetailCell.swift */,
-				71BDC03429CA049A0022A4DC /* LeagueDetailCell.xib */,
-				71BDC03729CA06D30022A4DC /* LogoDetailRow.swift */,
+				71FA9A7429CAEB250027E7EF /* Cells */,
+				71FA9A7529CAEB410027E7EF /* CustomRows */,
 			);
 			path = bela;
 			sourceTree = "<group>";
@@ -237,6 +232,7 @@
 		718398ED29BA55F90017DF0A /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				716713EC29A917FE00A48966 /* Info.plist */,
 				716713DE29A917FD00A48966 /* AppDelegate.swift */,
 				716713E029A917FD00A48966 /* SceneDelegate.swift */,
 				716713E729A917FE00A48966 /* Assets.xcassets */,
@@ -260,6 +256,42 @@
 				71B240E129C20D9F00E561B4 /* DetailViewModel.swift */,
 			);
 			path = DetailController;
+			sourceTree = "<group>";
+		};
+		71FA9A7429CAEB250027E7EF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				71FA9A7729CAEB590027E7EF /* LeagueCell */,
+				71FA9A7629CAEB560027E7EF /* LeagueDetailCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		71FA9A7529CAEB410027E7EF /* CustomRows */ = {
+			isa = PBXGroup;
+			children = (
+				71D7017329BFAE5B00279903 /* LeagueRow.swift */,
+				71BDC03729CA06D30022A4DC /* LeagueDetailRow.swift */,
+			);
+			path = CustomRows;
+			sourceTree = "<group>";
+		};
+		71FA9A7629CAEB560027E7EF /* LeagueDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				71BDC03329CA049A0022A4DC /* LeagueDetailCell.swift */,
+				71BDC03429CA049A0022A4DC /* LeagueDetailCell.xib */,
+			);
+			path = LeagueDetailCell;
+			sourceTree = "<group>";
+		};
+		71FA9A7729CAEB590027E7EF /* LeagueCell */ = {
+			isa = PBXGroup;
+			children = (
+				71D7017529BFAEB400279903 /* LeagueCell.swift */,
+				71D7017629BFAEB400279903 /* LeagueCell.xib */,
+			);
+			path = LeagueCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,7 +409,7 @@
 				716713EB29A917FE00A48966 /* LaunchScreen.storyboard in Resources */,
 				716713E829A917FE00A48966 /* Assets.xcassets in Resources */,
 				716713E629A917FD00A48966 /* Main.storyboard in Resources */,
-				71D7017829BFAEB400279903 /* LogoLabelCell.xib in Resources */,
+				71D7017829BFAEB400279903 /* LeagueCell.xib in Resources */,
 				71BDC03629CA049A0022A4DC /* LeagueDetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,7 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71D7017429BFAE5B00279903 /* LogoLabelRow.swift in Sources */,
+				71D7017429BFAE5B00279903 /* LeagueRow.swift in Sources */,
 				718398F529BA569B0017DF0A /* RequestError.swift in Sources */,
 				716713E329A917FD00A48966 /* MainViewController.swift in Sources */,
 				71BDC03529CA049A0022A4DC /* LeagueDetailCell.swift in Sources */,
@@ -411,10 +443,10 @@
 				718398F129BA56860017DF0A /* HTTPClient.swift in Sources */,
 				7138F61829BB4A5F00DF62B8 /* LeagueEndpoint.swift in Sources */,
 				7138F61A29BB4A7100DF62B8 /* LeagueService.swift in Sources */,
-				71BDC03829CA06D30022A4DC /* LogoDetailRow.swift in Sources */,
+				71BDC03829CA06D30022A4DC /* LeagueDetailRow.swift in Sources */,
 				718398F329BA56900017DF0A /* HTTPMethod.swift in Sources */,
 				716713DF29A917FD00A48966 /* AppDelegate.swift in Sources */,
-				71D7017729BFAEB400279903 /* LogoLabelCell.swift in Sources */,
+				71D7017729BFAEB400279903 /* LeagueCell.swift in Sources */,
 				718398EF29BA563D0017DF0A /* Endpoint.swift in Sources */,
 				7138F61D29BB4AC000DF62B8 /* League.swift in Sources */,
 				71B240E029C20CF000E561B4 /* DetailViewController.swift in Sources */,
@@ -599,7 +631,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W69WTC53M7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = bela/Info.plist;
+				INFOPLIST_FILE = bela/Core/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -627,7 +659,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W69WTC53M7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = bela/Info.plist;
+				INFOPLIST_FILE = bela/Core/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

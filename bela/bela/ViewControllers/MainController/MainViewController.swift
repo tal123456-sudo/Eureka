@@ -7,28 +7,27 @@
 
 import UIKit
 import Eureka
-import SafariServices
-
-//MARK: - Protocols
-protocol LeagueOutput {
-    func selectedLeague(leagueID: Int)
-}
-
 
 class MainViewController: FormViewController {
-// Example Data
-    let searchController = UISearchController(searchResultsController: nil)
+    
+    private let searchController = UISearchController(searchResultsController: nil)
+    
     var viewModel: MainViewModel!
-    var service: LeagueServiceable!
-
-    private var leagues: [League] = []
+    private var service: LeagueServiceable!
+    
+    lazy var leagues: [League] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         service = LeagueService()
         viewModel = MainViewModel(service: service)
-        
-            viewModel.fetchData { [weak self] result in
+        fetchData()
+        drawSearchBar()
+        fillForm()
+    }
+    
+    private func fetchData(){
+        viewModel.fetchData { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):
@@ -42,33 +41,36 @@ class MainViewController: FormViewController {
                 print(error)
             }
         }
+    }
+    
+    private func drawSearchBar(){
         let searchController = UISearchController(searchResultsController: nil) // search bar programatic
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Arama Yap"
         navigationItem.searchController = searchController
         definesPresentationContext = true
-  }
+    }
     
-    func fillForm(){ // eureka form
+    private func fillForm(){ // eureka form
         form +++ Section()
         for i in 0..<leagues.count{
-            //let sortedData = leagues.sorted{ $0.name ?? "Talha" < $1.name ?? "Talha" }
-            form.last! <<< LogoLabelRow() { row in
-                row.labelText = leagues[i].name!
+            form.last! <<< LeagueRow() { row in
+                row.nameLabel = leagues[i].name!
                 row.logoURL = URL(string: leagues[i].logo ?? "")
-                }.onCellSelection { cell, row in
+            }.onCellSelection { cell, row in
                 self.rowSelected(row, index: i)
             }
         }
     }
-    func rowSelected(_ row: LogoLabelRow, index: Int) {
-            let league = leagues[index]
+    
+    func rowSelected(_ row: LeagueRow, index: Int) {
+        let league = leagues[index]
         print(" id: \(league.id!.description)")
         let vc = DetailViewController()
         vc.leagueId = league.id?.description
         navigationController?.pushViewController(vc, animated: true)
-        }
+    }
 }
 
 extension MainViewController: UISearchResultsUpdating, UISearchBarDelegate {
@@ -79,13 +81,13 @@ extension MainViewController: UISearchResultsUpdating, UISearchBarDelegate {
             tableView.reloadData()
             return
         }
-        let filteredLeagues = leagues.filter { $0.name!.lowercased().contains(searchText.lowercased()) }
+        lazy var filteredLeagues = leagues.filter { $0.name!.lowercased().contains(searchText.lowercased()) }
         form.removeAll()
         
         form +++ Section()
         for league in filteredLeagues {
-            form.last! <<< LogoLabelRow() { row in
-                row.labelText = league.name ?? ""
+            form.last! <<< LeagueRow() { row in
+                row.nameLabel = league.name ?? ""
                 row.logoURL = URL(string: league.logo ?? "")
                 row.cellSetup { cell, _ in
                     cell.textLabel?.textColor = .blue
@@ -96,21 +98,21 @@ extension MainViewController: UISearchResultsUpdating, UISearchBarDelegate {
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-          guard let searchText = searchBar.text, searchText.isEmpty else {
-              return
-          }
-          form.removeAll()
-          form +++ Section()
-          for i in 0..<leagues.count {
-              form.last! <<< LogoLabelRow() { row in
-                  row.labelText = leagues[i].name!
-                  row.logoURL = URL(string: leagues[i].logo ?? "")
-                  row.cellSetup { cell, _ in
-                      cell.textLabel?.textColor = .blue
-                  }
-              }
-          }
-          tableView.reloadData()
-      }
+        guard let searchText = searchBar.text, searchText.isEmpty else {
+            return
+        }
+        form.removeAll()
+        form +++ Section()
+        for i in 0..<leagues.count {
+            form.last! <<< LeagueRow() { row in
+                row.nameLabel = leagues[i].name!
+                row.logoURL = URL(string: leagues[i].logo ?? "")
+                row.cellSetup { cell, _ in
+                    cell.textLabel?.textColor = .blue
+                }
+            }
+        }
+        tableView.reloadData()
+    }
 }
 

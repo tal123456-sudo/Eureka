@@ -21,14 +21,14 @@ extension LeagueEndpoint: Endpoint {
             return "/v3/standings"
         }
     }
-
+    
     var method: RequestMethod {
         switch self {
         case .leagues, .leagueDetail:
             return .get
         }
     }
-
+    
     var header: [String: String]? {
         let X_RapidAPI_Key = "b16ff17f20mshc765c4390a566cap11906fjsna489fbd5fe6d"
         let X_RapidAPI_Host = "api-football-v1.p.rapidapi.com"
@@ -45,8 +45,8 @@ extension LeagueEndpoint: Endpoint {
         case .leagues, .leagueDetail(league: _):
             return nil
         }
-    
     }
+    
     var params: [String: String]? {
         switch self {
         case .leagues:
@@ -54,6 +54,5 @@ extension LeagueEndpoint: Endpoint {
         case .leagueDetail(let value):
             return ["season": "2022","league": value]
         }
-    
     }
 }

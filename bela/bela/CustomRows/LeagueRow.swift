@@ -9,19 +9,18 @@ import Foundation
 import Eureka
 //import UIKit
 
-final class LogoLabelRow: Row<LogoLabelCell>, RowType {
+final class LeagueRow: Row<LeagueCell>, RowType {
    // var logo: UIImage?
-    var logoURL: URL?
-    var labelText: String?
-    
+   var logoURL: URL?
+   var nameLabel: String?
     
     required init(tag: String?) {
         super.init(tag: tag)
-        cellProvider = CellProvider<LogoLabelCell>(nibName: "LogoLabelCell")
+        cellProvider = CellProvider<LeagueCell>(nibName: "LeagueCell")
         cell.height = { 70 }
     }
     override func customUpdateCell() {
-           cell.configure(with: logoURL, labelText: labelText)
+           cell.configure(with: logoURL, nameLabel: nameLabel)
        }
 }
 

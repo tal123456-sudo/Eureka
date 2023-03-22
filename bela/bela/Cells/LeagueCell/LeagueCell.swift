@@ -9,16 +9,15 @@ import UIKit
 import Eureka
 import Kingfisher
 
-class LogoLabelCell: Cell<String>, CellType {
+class LeagueCell: Cell<String>, CellType {
     @IBOutlet weak var logoImageView: UIImageView!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var name: UILabel!
     
     var logoURL: URL?
   
-    func configure(with logoURL: URL?, labelText: String?) {
+    func configure(with logoURL: URL?, nameLabel: String?) {
         self.logoURL = logoURL
-        label.text = labelText
-      
+        name.text = nameLabel
         if let url = logoURL {
             logoImageView.kf.setImage(with: url)
         }

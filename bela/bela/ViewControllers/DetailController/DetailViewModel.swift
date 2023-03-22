@@ -9,7 +9,7 @@ import Foundation
 
 class DetailViewModel {
     
-     let service: LeagueServiceable
+    private let service: LeagueServiceable
     
     init(service: LeagueServiceable) {
         self.service = service

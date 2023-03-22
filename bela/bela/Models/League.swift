@@ -15,6 +15,7 @@ struct LeagueModel: Codable {
     }
   
 }
+
 struct Leagues: Codable {
     var league: League?
     
@@ -22,6 +23,7 @@ struct Leagues: Codable {
         case league = "league"
     }
 }
+
 struct League: Codable {
     var id: Int?
     var name: String?

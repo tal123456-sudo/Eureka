@@ -8,9 +8,9 @@
 import Foundation
 
 struct LeagueDetail: Codable {
-
+    
     var response: [Response]?
-
+    
     enum CodingKeys: String, CodingKey {
         case response
     }
