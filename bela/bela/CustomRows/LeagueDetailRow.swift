@@ -20,7 +20,7 @@ final class LeagueDetailRow: Row<LeagueDetailCell>, RowType {
     required init(tag: String?) {
         super.init(tag: tag)
         cellProvider = CellProvider<LeagueDetailCell>(nibName: "LeagueDetailCell")
-        cell.height = { 70 }
+        cell.height = { 44 }
     }
     
     override func customUpdateCell() {

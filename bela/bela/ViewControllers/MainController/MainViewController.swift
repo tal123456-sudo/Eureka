@@ -8,12 +8,15 @@
 import UIKit
 import Eureka
 
-class MainViewController: FormViewController{
+protocol LeagueRowSelectable {
+    var leagueId: String? { get }
+}
+class MainViewController: FormViewController, LeagueRowSelectable {
    
-    
     var viewModel: MainViewModel!
     private var service: LeagueServiceable!
-    var leagues: [League] = []
+    lazy var leagues: [League] = []
+    var leagueId: String? { get {return self.leagueId}}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +25,6 @@ class MainViewController: FormViewController{
             viewModel.delegate = self
             drawSearchBar()
             fetchData()
-        
     }
     
     private func drawSearchBar(){
@@ -74,22 +76,25 @@ extension MainViewController: UISearchResultsUpdating, UISearchBarDelegate {
                 row.logoURL = URL(string: league.logo ?? "")
                 row.cellSetup { cell, _ in
                     cell.textLabel?.textColor = .blue
+                }.onCellSelection { cell, row in
+                    self.rowSelected(row, index: league.id ?? 2)
                 }
             }
         }
-     //   tableView.reloadData()
+//        tableView.reloadData()
+//
     }
     
-    func searchBarTextDidEndEditing(for searchController: UISearchController) {
-        guard let searchText = searchController.searchBar.text, searchText.isEmpty else {
-            return
+    private func searchBarTextDidEndEditing(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text, searchText.isEmpty {
+            return form.removeAll()
+           
         }
-        form.removeAll()
-        fillForm()
+      
         tableView.reloadData()
     }
     
-    func searchBarCancelButtonClicked(for searchController: UISearchController) {
+    private func searchBarCancelButtonClicked(for searchController: UISearchController) {
         form.removeAll()
         fillForm()
     }
@@ -113,3 +118,5 @@ extension MainViewController: MainViewModelDelegate{
         viewModel.fetchData()
     }
 }
+ 
+

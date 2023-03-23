@@ -10,6 +10,7 @@ import Foundation
 protocol LeagueServiceable {
     func getLeague() async -> Result<LeagueModel, RequestError>
     func getLeagueDetail(league: String) async -> Result<LeagueDetail, RequestError>
+    
 }
 
 struct LeagueService: HTTPClient, LeagueServiceable {

@@ -15,7 +15,7 @@ class MainViewModel {
     
     private let service: LeagueServiceable
     weak var delegate: MainViewModelDelegate?
-    private var leagues: [League] = []
+    private lazy var leagues: [League] = []
 
     init(service: LeagueServiceable) {
         self.service = service
@@ -38,5 +38,4 @@ class MainViewModel {
             }
         }
     }
-
 }

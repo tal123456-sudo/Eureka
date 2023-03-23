@@ -9,39 +9,33 @@ import Foundation
 import UIKit
 import Eureka
 
-class DetailViewController: FormViewController{
+
+class DetailViewController: FormViewController, DetailViewModelDelegate {
     
-    var detailViewModel: DetailViewModel?
     var leagueId: String?
+    var detailViewModel: DetailViewModel!
     private var service: LeagueServiceable!
-    
     lazy var teams: [Standing] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         service = LeagueService()
         detailViewModel = DetailViewModel(service: service)
-        
-        if let leagueId = leagueId {
-            detailViewModel?.fetchData(id: leagueId) { [weak self] result in
-                switch result {
-                case .success(let response):
-                    if let detail = response.response?.first?.league?.standings?.first{
-                        for i in detail{
-                            self?.teams.append(i)
-                        }
-                    }
-                    DispatchQueue.main.async {
-                        self?.fillForm()
-                    }
-                case .failure(let error):
-                    print(error)
-                }
-            }
-        }
+        detailViewModel.delegate = self
+        fetchData()
     }
     
     private func fillForm(){
+        form +++ Section()
+        form.last! <<< LeagueDetailRow(){ row in
+            row.name = "Team Name"
+            row.lose = "Lose"
+            row.draw = "Draw"
+            row.wins = "Wins"
+            row.played = "Played"
+            row.points = "Points"
+            row.rank = "Rank"
+        }
         form +++ Section()
         for i in 0..<teams.count{
             form.last! <<< LeagueDetailRow() { row in
@@ -57,3 +51,18 @@ class DetailViewController: FormViewController{
     }
 }
 
+extension DetailViewController:LeagueRowSelectable {
+    func teamsDidFetchData(teams: [Standing]) {
+        self.teams = teams
+        self.fillForm()
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+    private func fetchData(){
+        if let id = leagueId {
+            detailViewModel?.fetchData(id: id)
+        }
+    }
+}
