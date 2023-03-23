@@ -38,6 +38,8 @@ class DetailViewModel {
                     self.delegate?.didFailWithError(error: error)
                 }
             }
+            
+            
         }
     }
 }
