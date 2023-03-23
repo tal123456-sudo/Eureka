@@ -40,6 +40,7 @@ extension LeagueEndpoint: Endpoint {
             ]
         }
     }
+    
     var body: [String: String]? {
         switch self {
         case .leagues, .leagueDetail(league: _):

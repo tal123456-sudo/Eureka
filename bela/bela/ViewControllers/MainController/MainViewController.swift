@@ -8,39 +8,21 @@
 import UIKit
 import Eureka
 
-class MainViewController: FormViewController {
-    
-    private let searchController = UISearchController(searchResultsController: nil)
+class MainViewController: FormViewController{
+   
     
     var viewModel: MainViewModel!
     private var service: LeagueServiceable!
-    
-    lazy var leagues: [League] = []
+    var leagues: [League] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         service = LeagueService()
-        viewModel = MainViewModel(service: service)
-        fetchData()
-        drawSearchBar()
-        fillForm()
-    }
-    
-    private func fetchData(){
-        viewModel.fetchData { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let response):
-                if let leagues = response.leagues?.compactMap({ $0.league}) {
-                    self.leagues = Array(leagues)
-                }
-                DispatchQueue.main.async {
-                    self.fillForm()
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
+            viewModel = MainViewModel(service: service)
+            viewModel.delegate = self
+            drawSearchBar()
+            fetchData()
+        
     }
     
     private func drawSearchBar(){
@@ -59,28 +41,29 @@ class MainViewController: FormViewController {
                 row.nameLabel = leagues[i].name!
                 row.logoURL = URL(string: leagues[i].logo ?? "")
             }.onCellSelection { cell, row in
-                self.rowSelected(row, index: i)
+                self.rowSelected(row, index: self.leagues[i].id ?? 2)
             }
         }
     }
     
     func rowSelected(_ row: LeagueRow, index: Int) {
-        let league = leagues[index]
-        print(" id: \(league.id!.description)")
+        let league = index.description
         let vc = DetailViewController()
-        vc.leagueId = league.id?.description
+        vc.leagueId = league
         navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 extension MainViewController: UISearchResultsUpdating, UISearchBarDelegate {
     
+    // ALLAH BELANI VERECEK SEARCH BAR KERE!!!!
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text, searchText.count > 2 else {
             // Minimum 2 karakter
             tableView.reloadData()
             return
         }
+        
         lazy var filteredLeagues = leagues.filter { $0.name!.lowercased().contains(searchText.lowercased()) }
         form.removeAll()
         
@@ -94,25 +77,39 @@ extension MainViewController: UISearchResultsUpdating, UISearchBarDelegate {
                 }
             }
         }
-        tableView.reloadData()
+     //   tableView.reloadData()
     }
     
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        guard let searchText = searchBar.text, searchText.isEmpty else {
+    func searchBarTextDidEndEditing(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text, searchText.isEmpty else {
             return
         }
         form.removeAll()
-        form +++ Section()
-        for i in 0..<leagues.count {
-            form.last! <<< LeagueRow() { row in
-                row.nameLabel = leagues[i].name!
-                row.logoURL = URL(string: leagues[i].logo ?? "")
-                row.cellSetup { cell, _ in
-                    cell.textLabel?.textColor = .blue
-                }
-            }
-        }
+        fillForm()
         tableView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(for searchController: UISearchController) {
+        form.removeAll()
+        fillForm()
     }
 }
 
+extension MainViewController: MainViewModelDelegate{
+    
+    func didFetchData(leagues: [League]) {
+        let leaguesWithoutFirstTwo = Array(leagues.suffix(from: 2)) // Burada ilk 2 elemanı diziden çıkarttım. Çünkü boş geliyordu API ile ilgili bir durum.
+        self.leagues = leaguesWithoutFirstTwo
+        DispatchQueue.main.async {
+            self.fillForm()
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
+    
+    private func fetchData(){
+        viewModel.fetchData()
+    }
+}

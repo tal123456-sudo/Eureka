@@ -99,13 +99,13 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="logoLabel" destination="u9a-jf-5PP" id="yEr-sI-iLX"/>
-                <outlet property="puan1Label" destination="4X1-Xy-HZw" id="T7r-hi-UzJ"/>
-                <outlet property="puan2Label" destination="JXi-91-580" id="5Mp-5g-Cgm"/>
-                <outlet property="puan3Label" destination="spc-M8-D68" id="1oA-HV-qtc"/>
-                <outlet property="puan4Label" destination="Ff6-5z-vS7" id="g8J-I3-iNR"/>
+                <outlet property="drawLabel" destination="4X1-Xy-HZw" id="fmP-dj-hlK"/>
+                <outlet property="loseLabel" destination="Ff6-5z-vS7" id="AhR-fS-BCy"/>
+                <outlet property="playedLabel" destination="JXi-91-580" id="lz3-jE-LvU"/>
                 <outlet property="rankLabel" destination="QJs-pf-JFu" id="ny0-U9-kts"/>
+                <outlet property="teamLogoLabel" destination="u9a-jf-5PP" id="dBH-oN-cnd"/>
                 <outlet property="teamNameLabel" destination="4dm-WV-3lx" id="9Z6-E7-Ia8"/>
+                <outlet property="winsLabel" destination="spc-M8-D68" id="MNg-q5-ZFT"/>
             </connections>
             <point key="canvasLocation" x="133.58778625954199" y="2.4647887323943665"/>
         </tableViewCell>

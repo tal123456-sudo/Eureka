@@ -22,5 +22,4 @@ class LeagueCell: Cell<String>, CellType {
             logoImageView.kf.setImage(with: url)
         }
     }
-    
 }

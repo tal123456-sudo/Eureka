@@ -24,6 +24,6 @@ final class LeagueDetailRow: Row<LeagueDetailCell>, RowType {
     }
     
     override func customUpdateCell() {
-        cell.configure(with: logoURL, rank: rank, wins: wins, draw: draw, lose: lose, played: played,points: points,name: name!)
+        cell.configure(with: logoURL, rank: rank, wins: wins, draw: draw, lose: lose, played: played,points: points,name: name ?? "")
        }
 }
