@@ -82,7 +82,6 @@ extension MainViewController: UISearchResultsUpdating, UISearchBarDelegate {
             }
         }
 //        tableView.reloadData()
-//
     }
     
     private func searchBarTextDidEndEditing(for searchController: UISearchController) {
@@ -90,7 +89,6 @@ extension MainViewController: UISearchResultsUpdating, UISearchBarDelegate {
             return form.removeAll()
            
         }
-      
         tableView.reloadData()
     }
     
