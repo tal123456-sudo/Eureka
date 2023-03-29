@@ -7,10 +7,9 @@
 
 import Foundation
 import Eureka
-//import UIKit
 
 final class LeagueRow: Row<LeagueCell>, RowType {
-   // var logo: UIImage?
+ 
    var logoURL: URL?
    var nameLabel: String?
     

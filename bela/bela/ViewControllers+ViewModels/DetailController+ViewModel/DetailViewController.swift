@@ -10,7 +10,7 @@ import UIKit
 import Eureka
 
 
-class DetailViewController: FormViewController, DetailViewModelDelegate {
+final class DetailViewController: FormViewController, DetailViewModelDelegate {
     
     var leagueId: String?
     var detailViewModel: DetailViewModel!

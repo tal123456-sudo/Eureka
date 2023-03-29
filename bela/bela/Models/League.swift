@@ -8,6 +8,7 @@
 import Foundation
 
 struct LeagueModel: Codable {
+    
     var leagues: [Leagues]?
     
     enum CodingKeys: String, CodingKey {
@@ -24,7 +25,11 @@ struct Leagues: Codable {
     }
 }
 
-struct League: Codable {
+struct League: Codable, Equatable {
+    static func == (lhs: League, rhs: League) -> Bool {
+        return lhs.name == rhs.name
+       }
+    
     var id: Int?
     var name: String?
     var logo: String?

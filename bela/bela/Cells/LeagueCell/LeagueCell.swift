@@ -18,6 +18,7 @@ class LeagueCell: Cell<String>, CellType {
     func configure(with logoURL: URL?, nameLabel: String?) {
         self.logoURL = logoURL
         name.text = nameLabel
+        
         if let url = logoURL {
             logoImageView.kf.setImage(with: url)
         }

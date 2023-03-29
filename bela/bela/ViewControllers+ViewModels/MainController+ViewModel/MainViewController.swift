@@ -11,11 +11,13 @@ import Eureka
 protocol LeagueRowSelectable {
     var leagueId: String? { get }
 }
-class MainViewController: FormViewController, LeagueRowSelectable {
+
+final class MainViewController: FormViewController, LeagueRowSelectable {
    
     var viewModel: MainViewModel!
     private var service: LeagueServiceable!
     lazy var leagues: [League] = []
+    var filteredLeagues: [League] = []
     var leagueId: String? { get {return self.leagueId}}
     
     override func viewDidLoad() {
@@ -25,86 +27,81 @@ class MainViewController: FormViewController, LeagueRowSelectable {
             viewModel.delegate = self
             drawSearchBar()
             fetchData()
-    }
+        }
     
-    private func drawSearchBar(){
+    
+     func drawSearchBar() {
         let searchController = UISearchController(searchResultsController: nil) // search bar programatic
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Arama Yap"
+         searchController.searchBar.delegate = self // set the delegate to self
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
     
-    private func fillForm(){ // eureka form
+
+
+     func fillForm(leagues: [League]){ // eureka form
         form +++ Section()
-        for i in 0..<leagues.count{
-            form.last! <<< LeagueRow() { row in
-                row.nameLabel = leagues[i].name!
-                row.logoURL = URL(string: leagues[i].logo ?? "")
-            }.onCellSelection { cell, row in
-                self.rowSelected(row, index: self.leagues[i].id ?? 2)
-            }
-        }
-    }
-    
+         for i in 0..<leagues.count{
+             form.last! <<< LeagueRow() { row in
+                 row.nameLabel = leagues[i].name!
+                  row.logoURL = URL(string: leagues[i].logo ?? "")
+              }.onCellSelection { cell, row in
+                  self.rowSelected(row, index: leagues[i].id!)
+              }
+          }
+      }
+
     func rowSelected(_ row: LeagueRow, index: Int) {
         let league = index.description
         let vc = DetailViewController()
         vc.leagueId = league
+        vc.title = row.nameLabel
         navigationController?.pushViewController(vc, animated: true)
     }
 }
 
+
 extension MainViewController: UISearchResultsUpdating, UISearchBarDelegate {
-    
-    // ALLAH BELANI VERECEK SEARCH BAR KERE!!!!
+
     func updateSearchResults(for searchController: UISearchController) {
+
+
         guard let searchText = searchController.searchBar.text, searchText.count > 2 else {
-            // Minimum 2 karakter
-            tableView.reloadData()
+            // Minimum 3 characters
+          // filteredLeagues.removeAll(keepingCapacity: true)
+          // tableView.reloadData()
             return
         }
-        
-        lazy var filteredLeagues = leagues.filter { $0.name!.lowercased().contains(searchText.lowercased()) }
-        form.removeAll()
-        
-        form +++ Section()
-        for league in filteredLeagues {
-            form.last! <<< LeagueRow() { row in
-                row.nameLabel = league.name ?? ""
-                row.logoURL = URL(string: league.logo ?? "")
-                row.cellSetup { cell, _ in
-                    cell.textLabel?.textColor = .blue
-                }.onCellSelection { cell, row in
-                    self.rowSelected(row, index: league.id ?? 2)
-                }
-            }
+        filteredLeagues = leagues.filter { $0.name!.lowercased().contains((searchController.searchBar.text?.lowercased())!) }
+        form.removeAll(keepingCapacity: true)
+
+
+        if !filteredLeagues.isEmpty {
+            fillForm(leagues: filteredLeagues)
+
+        } else {
+            form.removeAll(keepingCapacity: true)
         }
-//        tableView.reloadData()
     }
-    
-    private func searchBarTextDidEndEditing(for searchController: UISearchController) {
-        if let searchText = searchController.searchBar.text, searchText.isEmpty {
-            return form.removeAll()
-           
-        }
-        tableView.reloadData()
-    }
-    
-    private func searchBarCancelButtonClicked(for searchController: UISearchController) {
-        form.removeAll()
-        fillForm()
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        form.removeAll(keepingCapacity: true)
+        fillForm(leagues: leagues)
+
     }
 }
 
 extension MainViewController: MainViewModelDelegate{
     
     func didFetchData(leagues: [League]) {
-        let leaguesWithoutFirstTwo = Array(leagues.suffix(from: 2)) // Burada ilk 2 elemanı diziden çıkarttım. Çünkü boş geliyordu API ile ilgili bir durum.
+        let leaguesWithoutFirstTwo = Array(leagues.suffix(from: 4)) // Burada ilk 2 elemanı diziden çıkarttım. Çünkü boş geliyordu API ile ilgili bir durum.
         self.leagues = leaguesWithoutFirstTwo
         DispatchQueue.main.async {
-            self.fillForm()
+            self.fillForm(leagues: self.leagues)
         }
     }
     

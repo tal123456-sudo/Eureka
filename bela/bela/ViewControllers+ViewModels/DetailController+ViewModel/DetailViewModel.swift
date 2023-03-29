@@ -1,36 +1,40 @@
 //
-//  MainViewModel.swift
+//  DetailViewModel.swift
 //  bela
 //
-//  Created by Muhammet  on 10.03.2023.
+//  Created by Muhammet  on 15.03.2023.
 //
 
 import Foundation
-protocol MainViewModelDelegate: AnyObject {
-    func didFetchData(leagues: [League])
+
+protocol DetailViewModelDelegate: AnyObject {
+    func teamsDidFetchData(teams: [Standing])
     func didFailWithError(error: Error)
 }
 
-class MainViewModel {
+final class DetailViewModel {
     
     private let service: LeagueServiceable
-    weak var delegate: MainViewModelDelegate?
-    private lazy var leagues: [League] = []
-
+    weak var delegate: DetailViewModelDelegate?
+    private lazy var teams: [Standing] = []
+    
     init(service: LeagueServiceable) {
         self.service = service
     }
     
-    func fetchData() {
+    func fetchData(id: String) {
         Task(priority: .background) { [weak self] in
             guard let self = self else { return }
-            let result = await service.getLeague()
+            let result = await self.service.getLeagueDetail(league: id)
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
                 switch result {
                 case .success(let response):
-                    if let leagues = response.leagues?.compactMap({ $0.league}) {
-                        self.delegate?.didFetchData(leagues: leagues)
+                    if let teams = response.response?.first?.league?.standings?.first{
+                        for i in teams{
+                            self.teams.append(i)
+                        }
+                        self.delegate?.teamsDidFetchData(teams: self.teams )
                     }
                 case .failure(let error):
                     self.delegate?.didFailWithError(error: error)
