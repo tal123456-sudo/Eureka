@@ -16,7 +16,7 @@ final class DetailViewModel {
     
     private let service: LeagueServiceable
     weak var delegate: DetailViewModelDelegate?
-    private lazy var teams: [Standing] = []
+    lazy var teams: [Standing] = []
     
     init(service: LeagueServiceable) {
         self.service = service

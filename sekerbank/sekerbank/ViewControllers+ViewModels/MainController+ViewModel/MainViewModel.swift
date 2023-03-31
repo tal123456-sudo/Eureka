@@ -11,11 +11,11 @@ protocol MainViewModelDelegate: AnyObject {
     func didFailWithError(error: Error)
 }
 
-final class MainViewModel {
+class MainViewModel {
     
     private let service: LeagueServiceable
     weak var delegate: MainViewModelDelegate?
-    private lazy var leagues: [League] = []
+    lazy var leagues: [League] = []
 
     init(service: LeagueServiceable) {
         self.service = service

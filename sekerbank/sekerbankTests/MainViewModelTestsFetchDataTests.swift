@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import bela
+@testable import sekerbank
 
 class MainViewModelTests: XCTestCase {
     
@@ -41,4 +41,5 @@ class MockLeagueService: LeagueServiceable {
     func getLeagueDetail(league: String) async -> Result<LeagueDetail, RequestError> {
         return .failure(RequestError.unknown)
     }
+    
 }

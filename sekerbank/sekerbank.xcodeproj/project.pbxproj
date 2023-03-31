@@ -11,13 +11,14 @@
 		7138F61A29BB4A7100DF62B8 /* LeagueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138F61929BB4A7100DF62B8 /* LeagueService.swift */; };
 		7138F61D29BB4AC000DF62B8 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138F61C29BB4AC000DF62B8 /* League.swift */; };
 		7138F61F29BB4B3900DF62B8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7138F61E29BB4B3900DF62B8 /* MainViewModel.swift */; };
+		714856A629D6FCD900BA9278 /* FillFormTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714856A529D6FCD900BA9278 /* FillFormTest.swift */; };
 		716713DF29A917FD00A48966 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716713DE29A917FD00A48966 /* AppDelegate.swift */; };
 		716713E129A917FD00A48966 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716713E029A917FD00A48966 /* SceneDelegate.swift */; };
 		716713E329A917FD00A48966 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716713E229A917FD00A48966 /* MainViewController.swift */; };
 		716713E629A917FD00A48966 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716713E429A917FD00A48966 /* Main.storyboard */; };
 		716713E829A917FE00A48966 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716713E729A917FE00A48966 /* Assets.xcassets */; };
 		716713EB29A917FE00A48966 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716713E929A917FE00A48966 /* LaunchScreen.storyboard */; };
-		716713F629A917FE00A48966 /* ViewModelFetchDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716713F529A917FE00A48966 /* ViewModelFetchDataTests.swift */; };
+		716713F629A917FE00A48966 /* MainViewModelTestsFetchDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716713F529A917FE00A48966 /* MainViewModelTestsFetchDataTests.swift */; };
 		7167140029A917FE00A48966 /* belaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716713FF29A917FE00A48966 /* belaUITests.swift */; };
 		7167140229A917FE00A48966 /* belaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7167140129A917FE00A48966 /* belaUITestsLaunchTests.swift */; };
 		7167141029A9180C00A48966 /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = 7167140F29A9180C00A48966 /* Eureka */; };
@@ -36,6 +37,9 @@
 		71D7017729BFAEB400279903 /* LeagueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D7017529BFAEB400279903 /* LeagueCell.swift */; };
 		71D7017829BFAEB400279903 /* LeagueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D7017629BFAEB400279903 /* LeagueCell.xib */; };
 		71D7017B29BFB3D100279903 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 71D7017A29BFB3D100279903 /* Kingfisher */; };
+		71E6D4BE29D705A70031BB1E /* LeagueModeTestl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6D4BD29D705A70031BB1E /* LeagueModeTestl.swift */; };
+		71E6D4C029D706510031BB1E /* RequestErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6D4BF29D706510031BB1E /* RequestErrorTest.swift */; };
+		71E6D4C229D70E940031BB1E /* MainViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6D4C129D70E940031BB1E /* MainViewControllerTest.swift */; };
 		71F0F76529D3A2C00078C207 /* HTTPClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F0F76429D3A2C00078C207 /* HTTPClientTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +66,8 @@
 		7138F61C29BB4AC000DF62B8 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		7138F61E29BB4B3900DF62B8 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		7138F62029BB4C2100DF62B8 /* LeagueDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetail.swift; sourceTree = "<group>"; };
-		716713DB29A917FD00A48966 /* bela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bela.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		714856A529D6FCD900BA9278 /* FillFormTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillFormTest.swift; sourceTree = "<group>"; };
+		716713DB29A917FD00A48966 /* sekerbank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sekerbank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		716713DE29A917FD00A48966 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		716713E029A917FD00A48966 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		716713E229A917FD00A48966 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -70,9 +75,9 @@
 		716713E729A917FE00A48966 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		716713EA29A917FE00A48966 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		716713EC29A917FE00A48966 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		716713F129A917FE00A48966 /* belaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = belaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		716713F529A917FE00A48966 /* ViewModelFetchDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFetchDataTests.swift; sourceTree = "<group>"; };
-		716713FB29A917FE00A48966 /* belaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = belaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		716713F129A917FE00A48966 /* sekerbankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sekerbankTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		716713F529A917FE00A48966 /* MainViewModelTestsFetchDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTestsFetchDataTests.swift; sourceTree = "<group>"; };
+		716713FB29A917FE00A48966 /* sekerbankUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sekerbankUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		716713FF29A917FE00A48966 /* belaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = belaUITests.swift; sourceTree = "<group>"; };
 		7167140129A917FE00A48966 /* belaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = belaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		718398EE29BA563D0017DF0A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -88,6 +93,9 @@
 		71D7017329BFAE5B00279903 /* LeagueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRow.swift; sourceTree = "<group>"; };
 		71D7017529BFAEB400279903 /* LeagueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueCell.swift; sourceTree = "<group>"; };
 		71D7017629BFAEB400279903 /* LeagueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeagueCell.xib; sourceTree = "<group>"; };
+		71E6D4BD29D705A70031BB1E /* LeagueModeTestl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueModeTestl.swift; sourceTree = "<group>"; };
+		71E6D4BF29D706510031BB1E /* RequestErrorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestErrorTest.swift; sourceTree = "<group>"; };
+		71E6D4C129D70E940031BB1E /* MainViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTest.swift; sourceTree = "<group>"; };
 		71F0F76429D3A2C00078C207 /* HTTPClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,7 +138,7 @@
 		716713D229A917FD00A48966 = {
 			isa = PBXGroup;
 			children = (
-				716713DD29A917FD00A48966 /* bela */,
+				716713DD29A917FD00A48966 /* sekerbank */,
 				716713F429A917FE00A48966 /* belaTests */,
 				716713FE29A917FE00A48966 /* belaUITests */,
 				716713DC29A917FD00A48966 /* Products */,
@@ -140,14 +148,14 @@
 		716713DC29A917FD00A48966 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				716713DB29A917FD00A48966 /* bela.app */,
-				716713F129A917FE00A48966 /* belaTests.xctest */,
-				716713FB29A917FE00A48966 /* belaUITests.xctest */,
+				716713DB29A917FD00A48966 /* sekerbank.app */,
+				716713F129A917FE00A48966 /* sekerbankTests.xctest */,
+				716713FB29A917FE00A48966 /* sekerbankUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		716713DD29A917FD00A48966 /* bela */ = {
+		716713DD29A917FD00A48966 /* sekerbank */ = {
 			isa = PBXGroup;
 			children = (
 				718398ED29BA55F90017DF0A /* Core */,
@@ -158,15 +166,19 @@
 				71FA9A7529CAEB410027E7EF /* CustomRows */,
 				718398EC29BA55E90017DF0A /* Scenes */,
 			);
-			path = bela;
+			path = sekerbank;
 			sourceTree = "<group>";
 		};
 		716713F429A917FE00A48966 /* belaTests */ = {
 			isa = PBXGroup;
 			children = (
 				71F0F76429D3A2C00078C207 /* HTTPClientTest.swift */,
-				716713F529A917FE00A48966 /* ViewModelFetchDataTests.swift */,
+				716713F529A917FE00A48966 /* MainViewModelTestsFetchDataTests.swift */,
 				719C1E8229D41E2300EEBB14 /* DetailViewModelFetchDataTest.swift */,
+				714856A529D6FCD900BA9278 /* FillFormTest.swift */,
+				71E6D4BD29D705A70031BB1E /* LeagueModeTestl.swift */,
+				71E6D4BF29D706510031BB1E /* RequestErrorTest.swift */,
+				71E6D4C129D70E940031BB1E /* MainViewControllerTest.swift */,
 			);
 			path = belaTests;
 			sourceTree = "<group>";
@@ -319,9 +331,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		716713DA29A917FD00A48966 /* bela */ = {
+		716713DA29A917FD00A48966 /* sekerbank */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7167140529A917FE00A48966 /* Build configuration list for PBXNativeTarget "bela" */;
+			buildConfigurationList = 7167140529A917FE00A48966 /* Build configuration list for PBXNativeTarget "sekerbank" */;
 			buildPhases = (
 				716713D729A917FD00A48966 /* Sources */,
 				716713D829A917FD00A48966 /* Frameworks */,
@@ -331,18 +343,18 @@
 			);
 			dependencies = (
 			);
-			name = bela;
+			name = sekerbank;
 			packageProductDependencies = (
 				7167140F29A9180C00A48966 /* Eureka */,
 				71D7017A29BFB3D100279903 /* Kingfisher */,
 			);
 			productName = bela;
-			productReference = 716713DB29A917FD00A48966 /* bela.app */;
+			productReference = 716713DB29A917FD00A48966 /* sekerbank.app */;
 			productType = "com.apple.product-type.application";
 		};
-		716713F029A917FE00A48966 /* belaTests */ = {
+		716713F029A917FE00A48966 /* sekerbankTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7167140829A917FE00A48966 /* Build configuration list for PBXNativeTarget "belaTests" */;
+			buildConfigurationList = 7167140829A917FE00A48966 /* Build configuration list for PBXNativeTarget "sekerbankTests" */;
 			buildPhases = (
 				716713ED29A917FE00A48966 /* Sources */,
 				716713EE29A917FE00A48966 /* Frameworks */,
@@ -353,14 +365,14 @@
 			dependencies = (
 				716713F329A917FE00A48966 /* PBXTargetDependency */,
 			);
-			name = belaTests;
+			name = sekerbankTests;
 			productName = belaTests;
-			productReference = 716713F129A917FE00A48966 /* belaTests.xctest */;
+			productReference = 716713F129A917FE00A48966 /* sekerbankTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		716713FA29A917FE00A48966 /* belaUITests */ = {
+		716713FA29A917FE00A48966 /* sekerbankUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7167140B29A917FE00A48966 /* Build configuration list for PBXNativeTarget "belaUITests" */;
+			buildConfigurationList = 7167140B29A917FE00A48966 /* Build configuration list for PBXNativeTarget "sekerbankUITests" */;
 			buildPhases = (
 				716713F729A917FE00A48966 /* Sources */,
 				716713F829A917FE00A48966 /* Frameworks */,
@@ -371,9 +383,9 @@
 			dependencies = (
 				716713FD29A917FE00A48966 /* PBXTargetDependency */,
 			);
-			name = belaUITests;
+			name = sekerbankUITests;
 			productName = belaUITests;
-			productReference = 716713FB29A917FE00A48966 /* belaUITests.xctest */;
+			productReference = 716713FB29A917FE00A48966 /* sekerbankUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -399,7 +411,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 716713D629A917FD00A48966 /* Build configuration list for PBXProject "bela" */;
+			buildConfigurationList = 716713D629A917FD00A48966 /* Build configuration list for PBXProject "sekerbank" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -416,9 +428,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				716713DA29A917FD00A48966 /* bela */,
-				716713F029A917FE00A48966 /* belaTests */,
-				716713FA29A917FE00A48966 /* belaUITests */,
+				716713DA29A917FD00A48966 /* sekerbank */,
+				716713F029A917FE00A48966 /* sekerbankTests */,
+				716713FA29A917FE00A48966 /* sekerbankUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -482,9 +494,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714856A629D6FCD900BA9278 /* FillFormTest.swift in Sources */,
 				719C1E8329D41E2300EEBB14 /* DetailViewModelFetchDataTest.swift in Sources */,
+				71E6D4C029D706510031BB1E /* RequestErrorTest.swift in Sources */,
 				71F0F76529D3A2C00078C207 /* HTTPClientTest.swift in Sources */,
-				716713F629A917FE00A48966 /* ViewModelFetchDataTests.swift in Sources */,
+				71E6D4C229D70E940031BB1E /* MainViewControllerTest.swift in Sources */,
+				716713F629A917FE00A48966 /* MainViewModelTestsFetchDataTests.swift in Sources */,
+				71E6D4BE29D705A70031BB1E /* LeagueModeTestl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,12 +518,12 @@
 /* Begin PBXTargetDependency section */
 		716713F329A917FE00A48966 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 716713DA29A917FD00A48966 /* bela */;
+			target = 716713DA29A917FD00A48966 /* sekerbank */;
 			targetProxy = 716713F229A917FE00A48966 /* PBXContainerItemProxy */;
 		};
 		716713FD29A917FE00A48966 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 716713DA29A917FD00A48966 /* bela */;
+			target = 716713DA29A917FD00A48966 /* sekerbank */;
 			targetProxy = 716713FC29A917FE00A48966 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -655,7 +671,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W69WTC53M7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = bela/Core/Info.plist;
+				INFOPLIST_FILE = sekerbank/Core/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -666,7 +682,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = talhavarol.com.bela;
+				PRODUCT_BUNDLE_IDENTIFIER = talhavarol.com.sekerbank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -683,7 +699,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W69WTC53M7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = bela/Core/Info.plist;
+				INFOPLIST_FILE = sekerbank/Core/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -694,7 +710,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = talhavarol.com.bela;
+				PRODUCT_BUNDLE_IDENTIFIER = talhavarol.com.sekerbank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -718,7 +734,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bela.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/bela";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sekerbank.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sekerbank";
 			};
 			name = Debug;
 		};
@@ -738,7 +754,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bela.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/bela";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sekerbank.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sekerbank";
 			};
 			name = Release;
 		};
@@ -781,7 +797,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		716713D629A917FD00A48966 /* Build configuration list for PBXProject "bela" */ = {
+		716713D629A917FD00A48966 /* Build configuration list for PBXProject "sekerbank" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7167140329A917FE00A48966 /* Debug */,
@@ -790,7 +806,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7167140529A917FE00A48966 /* Build configuration list for PBXNativeTarget "bela" */ = {
+		7167140529A917FE00A48966 /* Build configuration list for PBXNativeTarget "sekerbank" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7167140629A917FE00A48966 /* Debug */,
@@ -799,7 +815,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7167140829A917FE00A48966 /* Build configuration list for PBXNativeTarget "belaTests" */ = {
+		7167140829A917FE00A48966 /* Build configuration list for PBXNativeTarget "sekerbankTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7167140929A917FE00A48966 /* Debug */,
@@ -808,7 +824,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7167140B29A917FE00A48966 /* Build configuration list for PBXNativeTarget "belaUITests" */ = {
+		7167140B29A917FE00A48966 /* Build configuration list for PBXNativeTarget "sekerbankUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7167140C29A917FE00A48966 /* Debug */,

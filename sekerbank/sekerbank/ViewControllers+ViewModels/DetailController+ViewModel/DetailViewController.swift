@@ -25,16 +25,16 @@ final class DetailViewController: FormViewController, DetailViewModelDelegate {
         fetchData()
     }
     
-    private func fillForm(){
+     func fillForm(){
         form +++ Section()
         form.last! <<< LeagueDetailRow(){ row in
             row.name = "Team Name"
-            row.lose = "Lose"
-            row.draw = "Draw"
-            row.wins = "Wins"
-            row.played = "Played"
-            row.points = "Points"
-            row.rank = "Rank"
+            row.lose = "L"
+            row.draw = "D"
+            row.wins = "W"
+            row.played = "P"
+            row.points = "P"
+            row.rank = "R"
         }
         form +++ Section()
         for i in 0..<teams.count{

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "716713DA29A917FD00A48966"
-               BuildableName = "bela.app"
-               BlueprintName = "bela"
-               ReferencedContainer = "container:bela.xcodeproj">
+               BuildableName = "sekerbank.app"
+               BlueprintName = "sekerbank"
+               ReferencedContainer = "container:sekerbank.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,9 +35,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "716713F029A917FE00A48966"
-               BuildableName = "belaTests.xctest"
-               BlueprintName = "belaTests"
-               ReferencedContainer = "container:bela.xcodeproj">
+               BuildableName = "sekerbankTests.xctest"
+               BlueprintName = "sekerbankTests"
+               ReferencedContainer = "container:sekerbank.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -46,9 +46,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "716713FA29A917FE00A48966"
-               BuildableName = "belaUITests.xctest"
-               BlueprintName = "belaUITests"
-               ReferencedContainer = "container:bela.xcodeproj">
+               BuildableName = "sekerbankUITests.xctest"
+               BlueprintName = "sekerbankUITests"
+               ReferencedContainer = "container:sekerbank.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -68,9 +68,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "716713DA29A917FD00A48966"
-            BuildableName = "bela.app"
-            BlueprintName = "bela"
-            ReferencedContainer = "container:bela.xcodeproj">
+            BuildableName = "sekerbank.app"
+            BlueprintName = "sekerbank"
+            ReferencedContainer = "container:sekerbank.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "716713DA29A917FD00A48966"
-            BuildableName = "bela.app"
-            BlueprintName = "bela"
-            ReferencedContainer = "container:bela.xcodeproj">
+            BuildableName = "sekerbank.app"
+            BlueprintName = "sekerbank"
+            ReferencedContainer = "container:sekerbank.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

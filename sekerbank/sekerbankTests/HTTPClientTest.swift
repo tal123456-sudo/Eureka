@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import bela
+@testable import sekerbank
 
 class HTTPClientTests: XCTestCase {
     
