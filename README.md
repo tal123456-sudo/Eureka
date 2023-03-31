@@ -26,6 +26,7 @@ form +++ Section()
 &0.value = Date()
 &0.title =   “DateRow”
 }
+
 gibi basit bir kullanımı vardır. Bu satır sonucunda, Date seçebildiğiniz, bir sekme açılacaktır. Detaylı anlatım için Medium yazımı bekleyin.
 ## Screen
 &nbsp;&nbsp;&nbsp;![ezgif com-resize](https://user-images.githubusercontent.com/80515499/229172884-7d3eab38-f986-450e-8557-42a6c87b2fa0.png)
