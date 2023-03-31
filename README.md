@@ -12,10 +12,15 @@
 
 ## Eureka Library
 Eureka, açık kaynaklı bir form builder kütüphanesidir. Basit bir şekilde formlar, satırlar oluşturmamıza olanak sağlar. TableView’ den türetilmiş, bazı tableView özellikleri taşıyan bir yapıdır. Eureka, tableView’ı kullanarak formları oluşturur ve her form elemanını tableView satırı olarak görmemizi sağlar. Bunlara “row” diyeceğiz. En önemli özelliklerinden birisi kullanımının basit olmasıdır. Birçok form elemanı geliştiriciler tarafından zaten tanımlanmıştır. Custom yapılar kullanmamız gerekebilir. Bu özelleştirmeyi yapmak oldukça kolaydır.
+
 -LabelRow()  bir UILabel elemanıdır.
+
 -DateRow()   bir Date elemanıdır.
+
 -CheckRow() bir UIButton elemanıdır.
+
 -SwitchRow() bir UISwitch elemanıdır.
+
 -SliderRow()  bir UISlider elemanıdır.
 
 ## Kullanımı:
