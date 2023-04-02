@@ -30,8 +30,8 @@ extension LeagueEndpoint: Endpoint {
     }
     
     var header: [String: String]? {
-        let X_RapidAPI_Key = "b16ff17f20mshc765c4390a566cap11906fjsna489fbd5fe6d"
-        let X_RapidAPI_Host = "api-football-v1.p.rapidapi.com"
+        let X_RapidAPI_Key = "X_RapidAPI_Key"
+        let X_RapidAPI_Host = "X_RapidAPI_Host"
         switch self {
         case .leagues, .leagueDetail(_):
             return [
